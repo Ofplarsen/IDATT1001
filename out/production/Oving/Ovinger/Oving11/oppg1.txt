@@ -1,0 +1,21 @@
+Oppgave 1 - Modellering
+
+Hvis vi ser på de to klassene som jeg har valgt at vi må ha, vil man se at de kan tolkes på to ulike metoder når det kommer
+til sammenheng. Vi kan være enige om at det alltid vil være flere av eiendomsobjektene i registeret, altså at klassen
+Porperty er "mange". Likevel kan vi tolke register-klassen på to ulike måter. Enten som om at det bare skal finnes ett register
+, altså bare ett objekt av klassen register, og da vil det være et 1-mange-forhold. Men det kan også sees på som om at det skal kunne
+opprettes flere register av eiendommer, og da vil man ha et mange-mange-forhold. Jeg velger å tolke teksten som om at det kun skal opprettes
+ett register, og det vil dermed bli 1-mange-forhold, hvor det er 50/50 på aggregering og komposisjon.
+
+Her velger jeg likevel å gå for komposisjon, fordi det gir kanskje mening at selve eiendommen eksisterer uten et register, men
+de ulike verdiene som gårdsnummer, osv vil kanskje ikke nødvendigvis eksistere uten registeret, ergo komposisjon. I tillegg er det
+tryggere å velge komposisjon i dette tilfellet, siden ingen av klassene er immutable.
+
+
+Oppgave 5:
+Jeg føler koden har low coupling mellom PropertyRegistry og Property så langt det lar seg gjøre. Når man lager et register blir de to klassene
+litt avhengig uansett, men føler jeg har gjort det bra. Et annet eksempel er at jeg lagde en ny klasse for menyen i seg selv, slik at
+mainmetoden ikke ble en stor, rotete metode men heller ryddig og fin. Dette er eksemepel på cohesion. Ellers har jeg laget et program som følger
+komposisjon på en god måte, som betyr at det er et sikkert program hvor informasjonen er trygt lagret, og bare lagret i registeret. Det er lite kode
+som gjentar seg selv, foruten om noen plasser hvor jeg f.eks looper igjennom en ArrayList, men jeg skal gjøre ulike ting med objektene som loopes.
+Dette ser ut som veldig lik kode, men er nødvendig.
